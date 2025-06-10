@@ -4,6 +4,7 @@
 
 .parent {
    border: 4px solid green;
+   position: relative; /*! позиционирует элемент относительно его нормального положения */
 }
 
 .child {
@@ -18,7 +19,6 @@
 }
 
 /*? relative */
-
 /* властывости: top,right,bottom,left */
 .child:nth-child(2) {
    position: relative; /*! смещает элемент относительно его нормального положения */
@@ -29,4 +29,49 @@
    /* z-index: -1; */ /*! выставляет часть блока назад по картинке (пример на сайте) */
    /* z-index: 1; */ /*! выставляет часть блока вперед по картинке (пример на сайте) */
    background-color: yellow;
+}
+
+/*? absolute */
+/* властывости: top,right,bottom,left */
+/* властывости работают от положения ближайшего позыциованого предка(родителя блока) */
+.child:nth-child(3) {
+   background-color: orange;
+   position: absolute; /*! позиционирует элемент относительно ближайшего позиционированного предка */
+   bottom: 0px;
+   right: 0px; /*! позиционирует элемент относительно родителя */
+}
+
+.child:nth-child(4) {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   background-color: brown;
+}
+
+.child:nth-child(5) {
+   position: absolute;
+   right: 160px;
+   top: 50px;
+   background-color: pink;
+}
+
+header {
+   background-image: url(https://images.pexels.com/photos/12018974/pexels-photo-12018974.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+   background-repeat: none;
+   background-position: center;
+   background-size: cover;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.bg-cover {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.4);
 }
