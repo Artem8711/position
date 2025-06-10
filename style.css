@@ -4,6 +4,7 @@
 
 .parent {
    border: 4px solid green;
+   height: 500px;
    position: relative; /*! позиционирует элемент относительно его нормального положения */
 }
 
@@ -41,12 +42,12 @@
    right: 0px; /*! позиционирует элемент относительно родителя */
 }
 
-.child:nth-child(4) {
+/* .child:nth-child(4) {
    position: absolute;
    right: 0px;
    top: 0px;
    background-color: brown;
-}
+} */
 
 .child:nth-child(5) {
    position: absolute;
@@ -55,7 +56,7 @@
    background-color: pink;
 }
 
-header {
+/* header {
    background-image: url(https://images.pexels.com/photos/12018974/pexels-photo-12018974.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
    background-repeat: none;
    background-position: center;
@@ -66,12 +67,29 @@ header {
    align-items: center;
    position: relative;
 }
-
 .bg-cover {
    position: absolute;
+   border: 2px solid black; 
    top: 0;
    bottom: 0;
    left: 0;
    right: 0;
    background-color: rgba(0, 0, 0, 0.4);
+   z-index: 0;*/
+
+.child:nth-child(4) {
+   position: fixed;
+   background-color: cadetblue;
+   left: 0px;
+   bottom: 0;
+}
+
+.super {
+   background-color: grey;
+   padding: 20px;
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   left: 10px;
+   margin: 0;
 }
